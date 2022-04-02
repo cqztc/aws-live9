@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Employee Information</title>
+</head>
+<center>
+	<font color="black" size="4" style="font-family: avenir">
+
+		<h1 style="color: DodgerBlue">Employee Database</h1>
+
+		<body bgcolor="lightgrey">
+
+			<form action="/addemp" autocomplete="on" method = "POST" enctype="multipart/form-data">
+
+				<button type="submit" formaction="/getemp" style="background: grey; height: 45px; width: 200px; color:white; font:oblique;">GET EMPLOYEE INFORMATION</button><br><br>
+
+		  		Employee ID:<br> <input style="height:25px;font-size:14pt; color:grey;" type="number" name="emp_id" autofocus size="40"><br><br>
+
+		  		First Name:<br> <input style="height:25px;font-size:14pt;color:grey;" type="text" name="first_name" ><br><br>
+
+
+				  Current Date:
+				  <input type="text" id="currentDate", name="currentDate1">
+				  <br><br>
+				  <script>
+				  var today = new Date();
+				  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+				  document.getElementById("currentDate").value = date;
+				  </script>
+
+					Current Time:
+					<input type="text" id="currentTime" , name="currentTime1">
+					<br><br>
+					<script>
+					var today = new Date();
+					var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+					document.getElementById("currentTime").value = time;
+					</script>
+
+		  		Image: <input type=file name="emp_image_file" style="height:25px;font-size:14pt;color:grey;"> <br><br>
+
+		  		<button type="submit" style="background: grey; height: 45px; width: 200px; color: white; size: 5; font:oblique;">UPDATE DATABASE</button>
+
+			</form>
+<a href="/about">About Us</a>
+		</body>
+
+	</font>
+</center>
+</html>
